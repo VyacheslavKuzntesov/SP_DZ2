@@ -25,14 +25,15 @@ while (true)
     }
     if (strTitle != strTitle1)
     {
-        /*bool isElevated;
+        bool LaunchType;
         WindowsIdentity identity = WindowsIdentity.GetCurrent();
         WindowsPrincipal principal = new WindowsPrincipal(identity);
-        isElevated = principal.IsInRole(WindowsBuiltInRole.Administrator);
-        */
+        LaunchType = principal.IsInRole(WindowsBuiltInRole.Administrator);
+
         Console.Clear();
-        //Console.WriteLine(isElevated);
-        Console.WriteLine(strTitle);
+        if (LaunchType == true) Console.WriteLine("Наша программа была запущена от имени администратора");
+        else Console.WriteLine("Наша программа не была запущена от имени администратора");
+        Console.WriteLine($"Заголовок активного окна: {strTitle}");
         strTitle1 = strTitle;
     }
 }
