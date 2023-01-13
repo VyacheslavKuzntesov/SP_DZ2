@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using DZ_2;
+using System.Runtime.InteropServices;
 using System.Security.Principal;
 using System.Text;
 
@@ -37,3 +38,9 @@ while (true)
         strTitle1 = strTitle;
     }
 }
+
+//Практика
+/*
+var Result = WinApiFunctions.MessageBox(IntPtr.Zero, "Вы уверены, что хотите полететь на Марс?", "Вопрос", 4);
+if (Result == 6) WinApiFunctions.MessageBox(IntPtr.Zero, "Тогда свяжитесь с Илоном!", "Полёт на марс", 0);
+*/
